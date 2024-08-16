@@ -32,7 +32,7 @@ module.exports = function(RED) {
 			if ( this.format == 1 ) {
 				msg.payload = test[1]/1000;
 			} else {
-				msg.payload = (test[1]/1000 - 32) * (5/9) ;
+				msg.payload = test[1] / 1000 * 9 / 5 + 32;
 			}	
 		} 
 		// Read the sensor and update message
